@@ -1,0 +1,209 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-weight: 0; }
+
+html {
+  font-size: 62.5%; }
+
+@media (max-width: 700px) {
+  html {
+    font-size: 56.25%; } }
+
+@media (max-width: 600px) and (min-width: 470px) {
+  html {
+    font-size: 43.75%; } }
+
+@media (max-width: 470px) and (min-width: 360px) {
+  html {
+    font-size: 37.5%; } }
+
+@media (max-width: 360px) and (min-width: 330px) {
+  html {
+    font-size: 31.25%; } }
+
+@media (max-width: 330px) and (min-width: 260px) {
+  html {
+    font-size: 25%; } }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  60% { }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  80% {
+    transform: translateY(-0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes typing {
+  0% {
+    width: 0ch; }
+  100% {
+    width: 17ch; } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 3rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* Number of repeation of the animation
+        /* animation-iteration-count: 2; */ }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 1.2rem;
+    text-transform: none;
+    display: hidden;
+    animation-fill-mode: both;
+    /* animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out; */
+    transition: ease-in .1s;
+    margin: 0 auto;
+    width: 17ch; }
+    .heading-primary--sub-line {
+      display: inline-block;
+      color: #6699CC; }
+    .heading-primary--sub-name {
+      color: #EC5f67; }
+  .heading-primary-type {
+    animation: typing 4s steps(17) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid #000; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-med {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
+.bg-video {
+  position: absolute;
+  border-radius: 3px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: .4;
+  overflow: hidden; }
+  .bg-video_content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.header {
+  height: 95vh;
+  background: rgba(247, 247, 247, 0.2);
+  background-size: cover;
+  border-radius: 3px;
+  position: relative; }
+  .header_namebox {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header_logobox {
+    width: 50%;
+    margin: 0 auto; }
+    .header_logobox-shape {
+      height: 29rem;
+      width: 29rem;
+      float: left;
+      background-color: orangered;
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -80%); }
+    .header_logobox-img {
+      width: 100%;
+      height: 100%; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2*6rem) /3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3*6rem) /4); }
+  .row .col-2-of-3 {
+    width: calc(2*((100% - 2*6rem)/3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc(2*((100% - 3*6rem)/4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3*((100% - 3*6rem)/4) + 2*6rem); }

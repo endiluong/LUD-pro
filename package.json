@@ -1,0 +1,23 @@
+{
+  "name": "ludpro",
+  "version": "1.0.0",
+  "description": "My profile page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludcifer1/LUD-pro.git"
+  },
+  "author": "LUDcifer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ludcifer1/LUD-pro/issues"
+  },
+  "homepage": "https://github.com/ludcifer1/LUD-pro#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

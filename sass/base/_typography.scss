@@ -1,0 +1,57 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+// Large Text Header
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+    &--main {
+        display: block;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 3rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        /* Number of repeation of the animation
+        /* animation-iteration-count: 2; */
+    }
+    &--sub {
+        display: block;
+        font-weight: 400;
+        font-size: 4rem;
+        letter-spacing: 1.2rem;
+        text-transform: none;
+        display: hidden;
+        animation-fill-mode: both;
+        /* animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out; */
+        // animation: moveInRight 1s ease-out;
+        transition: ease-in .1s;
+        margin: 0 auto;
+        width: 17ch;
+        &-line {
+            display: inline-block;
+            color: $color-blue-mat;
+        }
+        &-name {
+            color: $color-red-mat;
+        }
+    }
+    &-type {
+        animation: typing 4s steps(17) infinite;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 1px solid $color-black;
+       
+    }
+}
