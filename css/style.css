@@ -70,7 +70,7 @@ body {
     width: 17ch; } }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
@@ -85,8 +85,8 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 3rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -117,6 +117,19 @@ body {
     white-space: nowrap;
     border-right: 1px solid #000; }
 
+.heading-secondary {
+  padding-top: 4rem;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .5rem; }
+
+.heading-third {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200; }
+
 .u-center-text {
   text-align: center; }
 
@@ -129,6 +142,9 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-small {
+  margin-top: 2rem; }
+
 .u-margin-top-big {
   margin-top: 8rem; }
 
@@ -136,7 +152,6 @@ body {
   margin-top: 10rem; }
 
 .bg-video {
-  position: absolute;
   border-radius: 3px;
   top: 0;
   left: 0;
@@ -144,11 +159,33 @@ body {
   width: 100%;
   z-index: -2;
   opacity: .4;
-  overflow: hidden; }
+  overflow: hidden;
+  position: absolute; }
   .bg-video_content {
     height: 100%;
     width: 100%;
     object-fit: cover; }
+
+.card {
+  background-color: rgba(45, 45, 42, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  padding-top: 5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .2s; }
+  .card_icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    background-image: linear-gradient(to right, #ee6c4d, #D90429);
+    -webkit-background-clip: text;
+    color: transparent; }
+
+.section-about {
+  background-color: #eee;
+  padding: rem 0 15rem 0;
+  margin-top: 0; }
 
 .header {
   height: 95vh;
