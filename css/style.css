@@ -126,9 +126,9 @@ body {
   letter-spacing: .5rem; }
 
 .heading-third {
+  text-transform: uppercase;
   color: #fff;
-  font-size: 3rem;
-  font-weight: 200; }
+  font-size: 4rem; }
 
 .u-center-text {
   text-align: center; }
@@ -145,6 +145,9 @@ body {
 .u-margin-top-small {
   margin-top: 2rem; }
 
+.u-margin-top-med {
+  margin-top: 6rem; }
+
 .u-margin-top-big {
   margin-top: 8rem; }
 
@@ -157,8 +160,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -2;
-  opacity: .4;
+  z-index: 0;
+  opacity: .7;
   overflow: hidden;
   position: absolute; }
   .bg-video_content {
@@ -167,25 +170,46 @@ body {
     object-fit: cover; }
 
 .card {
-  background-color: rgba(45, 45, 42, 0.8);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  padding-top: 5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform .2s; }
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem; }
+  .card_side {
+    border-radius: 3px;
+    height: 40rem;
+    color: #fff;
+    font-size: 2rem;
+    transition: all 1.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; }
+    .card_side-front {
+      background-color: #333; }
+      .card_side-front-1 {
+        background: linear-gradient(to right bottom, #777, #333); }
+    .card_side-back {
+      background-color: #c2c0c0;
+      transform: rotateY(-180deg); }
+  .card_heading {
+    text-align: center;
+    padding-top: 25%; }
   .card_icon {
-    font-size: 6rem;
+    font-size: 9rem;
     margin-bottom: .5rem;
     background-image: linear-gradient(to right, #ee6c4d, #D90429);
     -webkit-background-clip: text;
     color: transparent; }
+  .card:hover .card_side-front {
+    transform: rotateY(180deg); }
+  .card:hover .card_side-back {
+    transform: rotateY(0deg); }
 
 .section-about {
-  background-color: #eee;
-  padding: rem 0 15rem 0;
-  margin-top: 0; }
+  background-color: #f7f7f7;
+  padding: 15rem 0 50rem 0;
+  margin-top: -15rem; }
 
 .header {
   height: 95vh;
