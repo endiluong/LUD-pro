@@ -1,46 +1,92 @@
-.card {
+.cardcover {
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    @include clearfix;
+}
+
+.holder {
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 40rem;
-    &_side {
-        border-radius: 3px;
-        height: 40rem;
-        color: $color-white;
-        font-size: 2rem;
-        transition: all 1.5s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
+    height: 35rem;
+    position: absolute;
+    &_card {
+        height: 35rem;
         width: 100%;
-        backface-visibility: hidden;
-        &-front {
-            background-color: $color-grey-dark-3;
-            &-1 {
-                background: linear-gradient(to right bottom, $color-grey-dark, $color-grey-dark-3);
+        &_side {
+            border: 2px solid black;
+            clear: both;
+            content: "";
+            position: absolute;
+            border-radius: 3px;
+            height: 35rem;
+            color: $color-white;
+            font-size: 2rem;
+            transition: all 1.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            backface-visibility: hidden;
+            &-front {
+                position: absolute;
+                &-1 {
+                    background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+                }
+                &-2 {
+                    background: linear-gradient(to right bottom, $color-or-li, $color-or-da);
+                }
+                &-3 {
+                    background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+                }
+            }
+            &-back {
+                width: 100%;
+                background-color: $color-grey-white-2;
+                transform: rotateY(-180deg);
             }
         }
-        &-back {
-            background-color: $color-grey-white-2;
-            transform: rotateY(-180deg);
+        &_heading {
+            padding-left: 3rem;
+            position: absolute;
+            font-size: 2rem;
+            text-align: center;
+            padding-top: 15%;
+        }
+        &_details {
+            color: $color-grey-dark-3;
+            font-weight: 500;
+            padding: 3rem;
+            margin-top: 5%;
+            text-transform: uppercase;
+            ul {
+                list-style-type: none;
+                width: 80%;
+                margin: 0 auto;
+                li {
+                    text-align: center;
+                    font-size: 1.8rem;
+                    padding: 1rem;
+                    width: 20rem;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $color-white;
+                    }
+                }
+            }
+        }
+        &_icon {
+            font-size: 9rem;
+            margin-bottom: .5rem;
+            background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
-    &_heading{
-        text-align: center;
-        padding-top: 25%;
-    }
-   
-    &_icon {
-        font-size: 9rem;
-        margin-bottom: .5rem;
-        background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    &:hover &_side-front {
+    .cardcover:hover &_card_side-front {
         transform: rotateY(180deg);
     }
-    &:hover &_side-back {
+    .cardcover:hover &_card_side-back {
         transform: rotateY(0deg);
     }
 }
