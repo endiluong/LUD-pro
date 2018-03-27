@@ -1,5 +1,5 @@
 .cardcover {
-    width: 100%;
+    width: 35%;
     height: 35rem;
     position: relative;
     @include clearfix;
@@ -15,12 +15,12 @@
         height: 35rem;
         width: 100%;
         &_side {
-            border: 2px solid black;
+            border: 1px solid black;
             clear: both;
             content: "";
             position: absolute;
             border-radius: 3px;
-            height: 35rem;
+            height: 10rem;
             color: $color-white;
             font-size: 2rem;
             transition: all 1.5s ease;
@@ -76,7 +76,7 @@
             }
         }
         &_icon {
-            font-size: 9rem;
+            font-size: 6rem;
             margin-bottom: .5rem;
             background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
             -webkit-background-clip: text;
@@ -88,5 +88,11 @@
     }
     .cardcover:hover &_card_side-back {
         transform: rotateY(0deg);
+    }
+    .cardcover:hover &_card_side {
+        height: 35rem;
+    }
+    .cardcover:hover &_card_side-back {
+        height: 30rem;
     }
 }
