@@ -256,6 +256,53 @@ body {
   .cardcover:hover .holder_card_side-back {
     height: 30rem; }
 
+.examples_box {
+  margin-top: 6rem;
+  position: relative; }
+  .examples_box-cards {
+    border-radius: 3px;
+    height: 20rem;
+    width: 54rem;
+    position: relative; }
+    .examples_box-cards-face {
+      position: absolute;
+      height: 20rem;
+      width: 54rem;
+      background-size: cover;
+      transition: all .2s;
+      box-shadow: 1rem 1.2rem 4rem #333; }
+      .examples_box-cards-face-tit {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(20%) translateX(165%);
+        font-size: 3rem;
+        color: #ff7730;
+        font-weight: 900;
+        text-transform: uppercase;
+        transition: all .3s;
+        backface-visibility: 0; }
+      .examples_box-cards-face-1 {
+        background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.7), rgba(255, 119, 48, 0.7)), url(../img/html5bg.jpg);
+        background-position: left center;
+        height: 100%; }
+      .examples_box-cards-face:hover {
+        filter: blur(1.5px) brightness(120%);
+        transform: scale(1.01) translateY(-3%);
+        box-shadow: 1rem 1.8rem 5rem #333; }
+      .examples_box-cards-face:hover .examples_box-cards-face-tit {
+        opacity: 1;
+        transform: translateY(20%) translateX(30%);
+        color: #f7f7f7;
+        font-size: 8rem; }
+      .examples_box-cards-face:active {
+        transform: translateY(3%);
+        box-shadow: 1.1rem 1.2rem 2.3rem #333; }
+
+.section_examples {
+  height: fit-content;
+  padding-bottom: 5rem;
+  background-color: #f7f7f7; }
+
 .header {
   height: 95vh;
   background: rgba(247, 247, 247, 0.2);

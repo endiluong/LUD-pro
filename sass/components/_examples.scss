@@ -1,0 +1,53 @@
+.examples {
+    &_heading {}
+    &_box {
+        margin-top: 6rem;
+        position: relative;
+        &-cards {
+            border-radius: 3px;
+            height: 20rem;
+            width: 54rem;
+            position: relative;
+            &-face {
+                position: absolute;
+                height: 20rem;
+                width: 54rem;
+                background-size: cover;
+                transition: all .2s;
+                box-shadow: 1rem 1.2rem 4rem #333;
+                &-tit {
+                    position: absolute;
+                    opacity: 0;
+                    transform: translateY(20%) translateX(165%);
+                    font-size: 3rem;
+                    color: $color-or-da;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    transition: all .3s;
+                    backface-visibility: 0;
+                }
+                &-1 {
+                    background-image: linear-gradient(to right bottom, rgba($color-or-li, 0.7), rgba($color-or-da, 0.7)), url(../img/html5bg.jpg);
+                    background-position: left center;
+                    height: 100%;
+                }
+                &:hover {
+                    filter: blur(1.5px) brightness(120%);
+                    transform: scale(1.01) translateY(-3%);
+                    box-shadow: 1rem 1.8rem 5rem #333;
+                }
+                &:hover &-tit {
+                    opacity: 1;
+                    transform: translateY(20%) translateX(30%);
+                    color: $color-grey-white-1;
+                    font-size: 8rem;
+                }
+                &:active {
+                    transform: translateY(3%);
+                    box-shadow: 1.1rem 1.2rem 2.3rem #333;
+                }
+                
+            }
+        }
+    }
+}

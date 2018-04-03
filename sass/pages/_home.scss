@@ -1,3 +1,9 @@
-.section-about{
+.section_about{
     // clip-path: polygon(0 0, 50% 15%, 100% 0, 100% 100%,0 100%); // clip-path: polygon(0 0,50% 15%,100% 0,100% 85%,50% 100%,0 85%); 
+}
+
+.section_examples{
+    height: fit-content;
+    padding-bottom: 5rem;
+    background-color: $color-grey-white-1;
 }
