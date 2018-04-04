@@ -100,7 +100,7 @@
 .js_card {
     border-radius: 3px;
     width: 100%;
-    height: 30rem;
+    height: 34rem;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -111,31 +111,33 @@
         font-size: 8rem;
         transition: all 1.5s ease;
         backface-visibility: hidden;
-        top:0;
+        top: 0;
         left: 0;
-
         &_front {
             position: absolute;
             background-color: $color-card-2-dark;
         }
         &_back {
             position: absolute;
-            background-color: red;
             transform: rotateY(-180deg);
+            &-1 {
+                background-color: $color-blue-mat;
+            }
+            &-2 {
+                background-color: $color-red-mat;
+            }
         }
     }
-    &_text{
-        height: 100%;
+    &_text {
         vertical-align: middle;
         text-align: center;
         font-size: 10rem;
+        margin-top: 25%;
     }
-
-    &:hover &_side_front{
+    &:hover &_side_front {
         transform: rotateY(180deg);
     }
-    
-    &:hover &_side_back{
+    &:hover &_side_back {
         transform: rotateY(0deg);
     }
 }

@@ -4,6 +4,7 @@
     background: #333;
     border-radius: 3px;
     overflow: hidden;
+
     &-img {
         height: 45vh;
         background-image: url(../img/jsie.jpg);
@@ -12,17 +13,19 @@
         background-position: center center;
         transform: translateY(-25%);
         z-index: 1;
-        
     }
 }
-.jss_heading{
-    position: absolute;
+
+.jss_heading {
+    width:100%;
     z-index: 2;
-    transform: translate(170%, 200%);
-    color: $color-white;
+    position: absolute;
     text-align: center;
+    color: $color-white;
+    transform: translate(0, 150%);
 }
-.js_section{
+
+.js_section {
     background-color: $color-grey-white-2;
     position: relative;
     padding-bottom: 10rem;
