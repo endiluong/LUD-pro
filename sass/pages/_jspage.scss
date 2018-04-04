@@ -1,0 +1,29 @@
+//header for Javascript page
+.jss_header {
+    height: 45vh;
+    background: #333;
+    border-radius: 3px;
+    overflow: hidden;
+    &-img {
+        height: 45vh;
+        background-image: url(../img/jsie.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transform: translateY(-25%);
+        z-index: 1;
+        
+    }
+}
+.jss_heading{
+    position: absolute;
+    z-index: 2;
+    transform: translate(170%, 200%);
+    color: $color-white;
+    text-align: center;
+}
+.js_section{
+    background-color: $color-grey-white-2;
+    position: relative;
+    padding-bottom: 10rem;
+}
